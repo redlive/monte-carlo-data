@@ -6,7 +6,7 @@ import Layout from '../Components/Layout';
 import { useGetCountries } from '../Hooks';
 
 const Home: React.FC  = () => {
-  const { loading, error, data = [] } = useGetCountries();
+  const { loading, error, data } = useGetCountries();
   const { countries = [] } = data;
 
   if (loading) return <CircularProgress />;
