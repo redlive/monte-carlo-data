@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { gql, useMutation } from '@apollo/client';
-import Layout from '../Components/Layout';
 import {
   TextField,
   Button,
@@ -9,6 +5,12 @@ import {
   CircularProgress,
   Box,
 } from '@mui/material';
+import { useMutation } from '@apollo/client';
+
+import React, { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+
+import Layout from '../Components/Layout';
 import { useGetCountry } from '../Hooks';
 import { UPDATE_COUNTRY } from '../Queries/updateCountry';
 

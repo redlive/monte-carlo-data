@@ -1,6 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useGetCountries } from './useGetCountries';
 import { useQuery } from '@apollo/client';
+
+import { useGetCountries } from './useGetCountries';
 
 // Mock the useQuery hook from Apollo Client
 jest.mock('@apollo/client', () => ({

@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks';
-
 import { useQuery } from '@apollo/client';
+
 import { useGetCountry } from './useGetCountry';
 
 // Mock the useQuery hook from Apollo Client

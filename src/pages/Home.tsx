@@ -1,8 +1,8 @@
-import { Button, CircularProgress, Typography } from '@mui/material';
-
-import Layout from '../Components/Layout';
+import { CircularProgress, Typography } from '@mui/material';
 
 import { Link } from 'react-router';
+
+import Layout from '../Components/Layout';
 import { useGetCountries } from '../Hooks';
 
 const Home: React.FC  = () => {

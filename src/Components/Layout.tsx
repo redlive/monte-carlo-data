@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { Container, AppBar, Toolbar, Typography, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-interface LayoutProps {
+type LayoutProps = {
   children: ReactNode;
 }
 

@@ -1,4 +1,5 @@
 import { useQuery } from '@apollo/client';
+
 import { GET_COUNTRY } from '../../Queries/getCountry';
 
 export const useGetCountry = (code: string) => {
