@@ -3,7 +3,7 @@ import { Button, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Layout from '../Components/Layout';
 
-const Info = () => {
+const Info: React.FC  = () => {
   return (
     <Layout>
       <Typography variant="h5">Eugene's Information</Typography>

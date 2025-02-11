@@ -12,7 +12,7 @@ import {
 import { useGetCountry } from '../Hooks';
 import { UPDATE_COUNTRY } from '../Queries/updateCountry';
 
-const CountryEdit = () => {
+const CountryEdit: React.FC = () => {
   const { code = '' } = useParams<{ code: string }>();
 
   const navigate = useNavigate();

@@ -5,7 +5,7 @@ import Layout from '../Components/Layout';
 import { Link } from 'react-router';
 import { useGetCountries } from '../Hooks';
 
-const Home = () => {
+const Home: React.FC  = () => {
   const { loading, error, data = [] } = useGetCountries();
   const { countries = [] } = data;
 
