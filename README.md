@@ -1,46 +1,113 @@
-# Getting Started with Create React App
+Here’s the actual `README.md` file content based on your project details:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```markdown
+# Monte Carlo Data
+
+## Description
+
+**Monte Carlo Data** is a React application designed to manage and query country-related data using Apollo Client and GraphQL. The project includes TypeScript for strong typing, Jest for testing, and Prettier for consistent code formatting. It utilizes Material UI for UI components and various testing utilities to ensure high-quality code.
+
+## Features
+
+- GraphQL API integration using Apollo Client
+- Material UI for UI components
+- TypeScript for static typing
+- Jest for unit and integration tests
+- Prettier for code formatting
+- React Router for routing
+- Custom hooks to interact with the backend API
+- Testing using React Testing Library and Jest
+
+## Installation
+
+To get started with the project, clone the repository and install the dependencies:
+
+```bash
+git clone git@github.com:redlive/monte-carlo-data.git
+cd monte-carlo-data
+yarn install
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
+- **`start`**: Starts the development server.
+    ```bash
+    yarn start
+    ```
+  
+- **`dev`**: Starts the development server with `nodemon` for automatic server restart.
+    ```bash
+    yarn dev
+    ```
 
-### `yarn start`
+- **`test`**: Runs Jest tests with the development environment.
+    ```bash
+    yarn test
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **`format`**: Formats the entire project using Prettier.
+    ```bash
+    yarn format
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Dependencies
 
-### `yarn test`
+- **@apollo/client**: GraphQL client for data fetching
+- **@emotion/react**, **@emotion/styled**: CSS-in-JS library for styling components
+- **@mui/material**: Material UI library for React components
+- **graphql**: GraphQL JavaScript implementation
+- **react**: JavaScript library for building user interfaces
+- **react-dom**: React package for DOM rendering
+- **react-router-dom**: Declarative routing for React
+- **typescript**: Static typing for JavaScript
+- **jest**: JavaScript testing framework
+- **jest-environment-jsdom**: Jest environment for simulating a browser-like environment for testing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development Dependencies
 
-### `yarn build`
+- **@testing-library/react-hooks**: Utility for testing custom React hooks
+- **jest-mock**: Utility for creating mock functions for Jest
+- **jsdom**: JavaScript DOM implementation used in testing
+- **prettier**: Code formatter for consistent code style
+- **ts-jest**: TypeScript preprocessor for Jest
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Configuration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ESLint
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project extends the default `react-app` and `react-app/jest` configurations from ESLint for linting JavaScript/TypeScript files.
 
-### `yarn eject`
+### Jest
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Jest is configured with `ts-jest` for transforming TypeScript files and uses the `jsdom` environment for running tests in a simulated browser environment.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prettier
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Prettier is used for automatic code formatting. You can run the following command to format the code:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+yarn format
+```
 
-## Learn More
+### Browserslist
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project supports modern browsers and defines which browsers to target for production and development environments.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Production**: Target browsers with more than 0.2% global usage and avoid dead browsers.
+- **Development**: Supports the last version of Chrome, Firefox, and Safari.
+
+## Testing
+
+This project uses Jest and React Testing Library to test the application.
+
+### Running Tests
+
+To run the tests, use the following command:
+
+```bash
+yarn test
+```
+
+Tests are configured to run in the `jsdom` environment, which simulates a browser for testing React components.
+
+```
