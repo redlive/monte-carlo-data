@@ -1,2 +1,2 @@
-export { useGetCountry } from './useGetCountry';
-export { useGetCountries } from './useGetCountries';
+export { useGetCountry } from './useGetCountry/useGetCountry';
+export { useGetCountries } from './useGetCountries/useGetCountries';
