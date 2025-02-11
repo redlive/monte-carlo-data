@@ -32,7 +32,8 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "nodemon",
-    "test": "NODE_ENV=development jest"
+    "test": "NODE_ENV=development jest",
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +60,7 @@
     "jsdom": "20",
     "node-libs-browser": "^2.2.1",
     "nodemon": "^3.1.9",
+    "prettier": "^3.5.0",
     "ts-jest": "29"
   },
   "jest": {

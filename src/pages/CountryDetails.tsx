@@ -4,12 +4,13 @@ import Layout from '../Components/Layout';
 import { Typography, CircularProgress, Box, Button } from '@mui/material';
 import { useGetCountry } from '../Hooks';
 
-const CountryDetails = () => {
+const CountryDetails: React.FC = () => {
   const { code = '' } = useParams<{ code: string }>();
   const { loading, error, data } = useGetCountry(code);
 
   if (loading) return <CircularProgress />;
-  if (error) return <Typography color="error">Error: {error.message}</Typography>;
+  if (error)
+    return <Typography color="error">Error: {error.message}</Typography>;
 
   const country = data?.country;
 
@@ -21,7 +22,9 @@ const CountryDetails = () => {
           <Typography variant="h6">Native Name: {country.native}</Typography>
           <Typography variant="h6">Capital: {country.capital}</Typography>
           <Typography variant="h6">Currency: {country.currency}</Typography>
-          <Typography variant="h6">Continent: {country.continent.name}</Typography>
+          <Typography variant="h6">
+            Continent: {country.continent.name}
+          </Typography>
           <Typography variant="h6">Languages:</Typography>
           <ul>
             {country.languages.map((language: { name: string }) => (

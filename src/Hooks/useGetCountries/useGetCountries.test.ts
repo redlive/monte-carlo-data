@@ -10,7 +10,11 @@ jest.mock('@apollo/client', () => ({
 describe('useGetCountries', () => {
   it('should return loading true when query is loading', () => {
     // Mock the useQuery to simulate loading state
-    (useQuery as jest.Mock).mockReturnValue({ loading: true, error: undefined, data: [] });
+    (useQuery as jest.Mock).mockReturnValue({
+      loading: true,
+      error: undefined,
+      data: [],
+    });
 
     const { result } = renderHook(() => useGetCountries());
 
@@ -22,7 +26,11 @@ describe('useGetCountries', () => {
   it('should return error when query fails', () => {
     const mockError = new Error('Network Error');
     // Mock the useQuery to simulate error state
-    (useQuery as jest.Mock).mockReturnValue({ loading: false, error: mockError, data: [] });
+    (useQuery as jest.Mock).mockReturnValue({
+      loading: false,
+      error: mockError,
+      data: [],
+    });
 
     const { result } = renderHook(() => useGetCountries());
 
@@ -33,10 +41,23 @@ describe('useGetCountries', () => {
 
   it('should return data when query succeeds', () => {
     const mockData = {
-      countries: [{"capital": "Washington, D.C.", "code": "US", "currency": "USD", "name": "United States", "native": "English"}, {"capital": "Ottawa", "code": "CA", "currency": "CAD", "name": null}],
+      countries: [
+        {
+          capital: 'Washington, D.C.',
+          code: 'US',
+          currency: 'USD',
+          name: 'United States',
+          native: 'English',
+        },
+        { capital: 'Ottawa', code: 'CA', currency: 'CAD', name: null },
+      ],
     };
     // Mock the useQuery to simulate successful query with data
-    (useQuery as jest.Mock).mockReturnValue({ loading: false, error: undefined, data: mockData });
+    (useQuery as jest.Mock).mockReturnValue({
+      loading: false,
+      error: undefined,
+      data: mockData,
+    });
 
     const { result } = renderHook(() => useGetCountries());
 
@@ -47,10 +68,14 @@ describe('useGetCountries', () => {
 
   it('should return empty array if no countries are returned', () => {
     // Mock the useQuery to simulate no data case
-    (useQuery as jest.Mock).mockReturnValue({ loading: false, error: undefined, data: { countries: [] } });
+    (useQuery as jest.Mock).mockReturnValue({
+      loading: false,
+      error: undefined,
+      data: { countries: [] },
+    });
 
     const { result } = renderHook(() => useGetCountries());
 
-    expect(result.current.data).toEqual({"countries": []});
+    expect(result.current.data).toEqual({ countries: [] });
   });
 });

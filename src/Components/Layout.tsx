@@ -15,7 +15,14 @@ const Layout = ({ children }: LayoutProps) => {
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Monte Carlo Data
           </Typography>
-          <Link to="/" style={{ color: 'white', textDecoration: 'none', marginRight: '15px' }}>
+          <Link
+            to="/"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              marginRight: '15px',
+            }}
+          >
             Home
           </Link>
           <Link to="/info" style={{ color: 'white', textDecoration: 'none' }}>
@@ -33,4 +40,3 @@ const Layout = ({ children }: LayoutProps) => {
 };
 
 export default Layout;
-    

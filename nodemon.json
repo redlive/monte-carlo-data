@@ -1,7 +1,6 @@
 {
-    "watch": ["src"],
-    "ext": "ts,tsx,js,json",
-    "ignore": ["node_modules"],
-    "exec": "yarn start"
-  }
-  
+  "watch": ["src"],
+  "ext": "ts,tsx,js,json",
+  "ignore": ["node_modules"],
+  "exec": "yarn start"
+}
