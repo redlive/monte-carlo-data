@@ -52,6 +52,7 @@ yarn install
 
 ## Dependencies
 
+- **NodeJS**: Version 20
 - **@apollo/client**: GraphQL client for data fetching
 - **@emotion/react**, **@emotion/styled**: CSS-in-JS library for styling components
 - **@mui/material**: Material UI library for React components
